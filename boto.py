@@ -107,7 +107,8 @@ def get_Bot_Answer(user_msg):
                            " Best Friend: Shrek called, he wants his face back."
     elif len(user_msg_array)== 1:
         return "confused", "please be more specific, write a sentence or a question to help me to understand"
-
+    elif user_msg.startswith("Do you"):
+        return "confused", "I cannot answer your question, i am so sorry..."
     else:
         return "confused", "I am afraid that I am not so advanced to provide you with some assistance. " \
                            "But ask me anything else, for example: " + random.choice(bot_questions)
